@@ -22,6 +22,10 @@ class bex_d7dull extends CModule
             $this->MODULE_VERSION_DATE = $arModuleVersion['VERSION_DATE'];
         }
         
+        /* Модули содержащие точку в названии папки считаются пользовательскими и располагаются ТОЛЬКО в разделе "Marketplace / Установленные решения"
+         * /bitrix/admin/partner_modules.php?lang=ru
+         * Модули без точки в названии папки - системные и располагаются только в разделе "Настройки -> Настройки продукта -> Модули"
+         */
         $this->MODULE_ID = 'bex.d7dull';
         $this->MODULE_NAME = Loc::getMessage('BEX_D7DULL_MODULE_NAME');
         $this->MODULE_DESCRIPTION = Loc::getMessage('BEX_D7DULL_MODULE_DESCRIPTION');
